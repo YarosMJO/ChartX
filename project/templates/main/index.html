@@ -1,0 +1,14 @@
+{% extends "_base.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block content %}
+
+  <form  action="" role = "form"  method="post">
+      <div id="content" />
+  </form>
+  <script>window.parsedData = "{{data}}";</script>
+  <script defer src="static/dist/indexbundle.js" type="text/javascript"></script>
+{% endblock %}

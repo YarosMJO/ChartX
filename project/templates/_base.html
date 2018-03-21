@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chartex : {% block title %}{% endblock %}</title>
+    <meta charset="utf-8"/>
+    <meta content="initial-scale=1, width=device-width" name="viewport"/>
+    <!-- styles -->
+    <link href="http://maxcdn.bootstrapcdn.com/bootswatch/3.2.0/yeti/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <link href="{{url_for('static', filename='load.css')}}" rel="stylesheet" media="screen">
+    {% block css %}{% endblock %}
+  </head>
+
+  <body >
+    <h1 id = "load">
+      <span class="let1">l</span>
+      <span class="let2">o</span>
+      <span class="let3">a</span>
+      <span class="let4">d</span>
+      <span class="let5">i</span>
+      <span class="let6">n</span>
+      <span class="let7">g</span>
+    </h1>
+
+    {% include "navi.html" %}
+
+    <div class="container">
+
+      <br>
+      <div  style= "margin-top:35px">
+      <!-- messages -->
+      {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+      <div class="row">
+        <div class="col-md-12">
+          {% for category, message in messages %}
+          <div class="alert alert-{{ category }}">
+            <a class="close" title="Close" href="#" data-dismiss="alert" >&times;</a>
+           {{message}}
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+      {% endwith %}
+      </div>
+
+      <!-- child template -->
+      {% block content %}{% endblock %}
+
+      <br>
+
+      <!-- errors -->
+      {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}</p>
+      {% endif %}
+
+    </div>
+
+    <!-- scripts -->
+    <script src='https://code.jquery.com/jquery-3.1.1.min.js'></script>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+
+    <script src='static/dist/commonbundle.js' type='text/javascript'></script>
+    <!--<script src="{{url_for('static', filename='main.js')}}" type="text/javascript"></script>-->
+    {% block js %}{% endblock %}
+  </body>
+  <script>
+    document.getElementById("load").className = "paused";
+    document.body.style.backgroundColor = "#FF9966";
+</script>
+</html>

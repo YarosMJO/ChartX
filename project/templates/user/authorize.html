@@ -1,0 +1,17 @@
+{% extends "_base.html" %}
+
+{% block title %}
+    Authorize
+{% endblock %}
+
+{% block content %}
+
+    <form id ="form" action="{{ url_for('user.authorize') }}" role="form" method="post">
+      <div  id="contentLog" /></div>
+    </form>
+    <form id ="formx" action="" role="form" method="post">
+      <div  id="contentReg" /></div>
+    </form>
+    <script defer src="static/dist/authorizebundle.js" type="text/javascript"></script>
+
+{% endblock %}

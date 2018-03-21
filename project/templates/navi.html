@@ -1,0 +1,28 @@
+<head>
+  <link rel="stylesheet" href="static/style.css">
+</head>
+<!--move to head in layout _base-->
+<nav class="navbar-fixed-top" role="navigation">
+<header>
+  <div class="container">
+
+    <div class="logo-box">
+    <img src="static/images/chartx.qNCDV.png" >
+    </div>
+    <nav>
+    <ul>
+    {% if current_user.is_authenticated %}
+        <li><a href="{{ url_for('main.home') }}">home</a></li>
+    {% endif %}
+    {% if current_user.is_authenticated %}
+         <li><a href="{{ url_for('user.logout') }}">Logout</a></li>
+    {% else %}
+        <li><a href="{{ url_for('user.authorize') }}">Authorize</a></li>
+    {% endif %}
+        <li><a href="">about</a></li>
+        <li><a href="">contact</a></li>
+    </ul>
+    </nav>
+  </div>
+</header>
+</nav>
