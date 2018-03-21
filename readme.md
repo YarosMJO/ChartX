@@ -1,53 +1,7 @@
-# Flask User Management
+# ChartX
+This will be an add-on that analyzes and displays the history of the browser (chrome) pretty beautiful and graphic diagrams. It will also be able to offer the user interesting links according to their history.
+![alt text](https://github.com/YarosMJO/Chartex/blob/master/src_photos/home_barchart.png)
+![alt text](https://github.com/YarosMJO/Chartex/blob/master/src_photos/sign_in.png)
+![alt text](https://github.com/YarosMJO/Chartex/blob/master/src_photos/sign_up.png)
 
-[![Build Status](https://travis-ci.org/mjhea0/flask-basic-registration.svg?branch=master)](https://travis-ci.org/mjhea0/flask-basic-registration)
-
-Starter app for managing users - login/logout and registration.
-
-## QuickStart
-
-### Set Environment Variables
-
-```sh
-$ export APP_SETTINGS="project.config.DevelopmentConfig"
-```
-
-or
-
-```sh
-$ export APP_SETTINGS="project.config.ProductionConfig"
-```
-
-### Update Settings in Production
-
-1. `SECRET_KEY`
-1. `SQLALCHEMY_DATABASE_URI`
-
-### Create DB
-
-```sh
-$ python manage.py create_db
-$ python manage.py db init
-$ python manage.py db migrate
-$ python manage.py create_admin
-```
-
-### Run
-
-```sh
-$ python manage.py runserver
-```
-
-### Testing
-
-Without coverage:
-
-```sh
-$ python manage.py test
-```
-
-With coverage:
-
-```sh
-$ python manage.py cov
-```
+# Status - actively develops 
