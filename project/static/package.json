@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "babel": "^6.23.0",
-    "d3": "^4.13.0",
+    "d3": "^7.6.1",
     "hard-source-webpack-plugin": "^0.6.4",
     "history": "^4.7.2",
     "prop-types": "^15.6.1",
